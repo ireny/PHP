@@ -38,9 +38,7 @@ include 'header.php';
         $FilterSecondDate = $_POST['lastDayFilter'];
         
         if (CompareTwoDates($FilterFirstDate,$FilterSecondDate) === -1 ||
-               ($FilterFirstDate == 'Без Ограничение'&& $FilterSecondDate!='Без Ограничение') ||
-                ($FilterFirstDate != 'Без Ограничение'&& $FilterSecondDate=='Без Ограничение')||
-                ($FilterFirstDate == 'Без Ограничение'&& $FilterSecondDate=='Без Ограничение')) {
+                ($FilterFirstDate == 'Без Ограничение'|| $FilterSecondDate=='Без Ограничение')) {
             $DateFilterOn = TRUE;
         }else{
             $DateFilterOn = FALSE;
